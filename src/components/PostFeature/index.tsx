@@ -1,12 +1,12 @@
 import React from "react";
 import PostCoverImage from "../PostCoverImage";
-import cookingImage from "../../../public/images/HomeImage.svg";
 import PostSummary from "../PostSummary";
-import { postRepository } from "@/repositories/post";
+import { findAllPublicPosts } from "@/utils/queries/posts";
 
 export default async function PostFeature() {
-  const postLink = `/post/${""}`;
-    const posts = await postRepository.findAll();
+  const posts = await findAllPublicPosts()
+  const post = posts[0]
+  const postLink = `/post/${post.slug}`;
   
 
   return (
@@ -14,19 +14,19 @@ export default async function PostFeature() {
       <PostCoverImage
         LinkProps={{ href: postLink }}
         ImageProps={{
-          src: cookingImage,
+          src: post.coverImageUrl,
           width: 1200,
           height: 720,
-          alt: "Culinary home image",
+          alt: post.title,
           priority: true,
         }}
       />
       <div className={"max-w-[450px]"}>
         <PostSummary
-          createdAt={posts[0].createdAt}
-          postTitle={posts[0].title}
-          postLink={posts[0].slug}
-          excerpt={posts[0].excerpt}
+          createdAt={post.createdAt}
+          postTitle={post.title}
+          postLink={postLink}
+          excerpt={post.excerpt}
         />
       </div>
     </section>

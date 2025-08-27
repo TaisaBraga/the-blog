@@ -1,16 +1,14 @@
-import { postRepository } from "@/repositories/post";
 import React from "react";
 import PostCoverImage from "../PostCoverImage";
-import PostHeading from "../PostHeading";
-import { formatDateTime, formatRelativeDate } from "@/utils/format-datetime";
 import PostSummary from "../PostSummary";
+import { findAllPublicPosts } from "@/utils/queries/posts";
 
 export default async function PostsList() {
-  const posts = await postRepository.findAll();
+  const posts = await findAllPublicPosts()
 
   return (
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 ">
-      {posts.map((post) => {
+      {posts.slice(1).map((post) => {
         const postLink = `/post/${post.slug}`;
 
         return (
