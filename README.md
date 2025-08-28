@@ -39,4 +39,4 @@ Then open http://localhost:3000 in your browser.
 
 ## 🖼️ Preview  
 ### 💻 Desktop
-![desktop-Page](./public/images/screenshot-desktop.png)
+![desktop-Page](./public/images/screenshot-desktop.jpeg)
