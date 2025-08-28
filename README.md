@@ -15,15 +15,19 @@ Make sure you have the following installed:
 
 1. **Clone the repository**  
 
+```bash
 `git clone <repository-url>`
 `cd the-blog`
 
 2. **Install dependencies**
 
-`npm install`
+```bash
+npm install
 
 Or with Yarn:
-`yarn install`
+```bash
+yarn install
+
 
 3. **Run the development server**
 
@@ -31,6 +35,6 @@ Or with Yarn:
 
 Then open http://localhost:3000 in your browser.
 
-🖼️ Preview
-💻 Desktop
+### 🖼️ Preview··
+#### 💻 Desktop
 ![desktop-Page](./public/images/screenshot-desktop.png)
