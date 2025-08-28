@@ -1,8 +1,6 @@
-# The Blog
+📝 ## The Blog
 
-🚀 # Quick Start
-
-## Prerequisites
+🚀 ## Prerequisites
 - Node.js 18+
 - npm or yarn
 
@@ -10,15 +8,16 @@
 
 1. Clone the repository
 
-git clone <repository-url>
-cd ducaplay-server
+`git clone <repository-url>`
+`cd the-blog`
 
 2. Install dependencies
 
-npm install
+`npm install`
 
 4. Run the server
 
-npm run dev
+`npm run dev`
 
 ![desktopPage](screenshot-desktop.png)
+![desktop-Page](./public/images/screenshot-desktop.png)
