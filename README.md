@@ -16,25 +16,27 @@ Make sure you have the following installed:
 1. **Clone the repository**  
 
 ```bash
-`git clone <repository-url>`
-`cd the-blog`
+git clone <repository-url>
+cd the-blog
+```
 
 2. **Install dependencies**
 
 ```bash
 npm install
-
-Or with Yarn:
+```
+- Or with Yarn:
 ```bash
-yarn install
-
+yarn install 
+```
 
 3. **Run the development server**
-
-`npm run dev`
+```bash
+npm run dev
+```
 
 Then open http://localhost:3000 in your browser.
 
-### 🖼️ Preview··
-#### 💻 Desktop
+## 🖼️ Preview  
+### 💻 Desktop
 ![desktop-Page](./public/images/screenshot-desktop.png)
