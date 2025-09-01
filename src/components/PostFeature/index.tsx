@@ -1,10 +1,10 @@
 import React from "react";
 import PostCoverImage from "../PostCoverImage";
 import PostSummary from "../PostSummary";
-import { findAllPublicPosts } from "@/utils/queries/posts";
+import { findAllPublicPostsCached } from "@/utils/queries/posts";
 
 export default async function PostFeature() {
-  const posts = await findAllPublicPosts()
+  const posts = await findAllPublicPostsCached()
   const post = posts[0]
   const postLink = `/post/${post.slug}`;
   
