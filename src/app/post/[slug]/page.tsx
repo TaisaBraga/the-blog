@@ -1,6 +1,9 @@
 import SinglePost from "@/components/SinglePost";
 import SpinLoader from "@/components/SpinLoader";
-import { findPostsBySlugCached } from "@/utils/queries/posts";
+import {
+  findAllPublicPostsCached,
+  findPostsBySlugCached,
+} from "@/utils/queries/posts";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 
@@ -20,12 +23,22 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+  const posts = await findAllPublicPostsCached();
+  const params = posts.map((post) => {
+    return {
+      slug: post.slug,
+    };
+  });
+  return params;
+}
+
 export default async function PostSlugPage({ params }: PostSlugPageProps) {
   const { slug } = await params;
 
   return (
-    <Suspense fallback={<SpinLoader className="min-h-20 mb-16"/>}>
-      <SinglePost slug={slug}/>
+    <Suspense fallback={<SpinLoader className="min-h-20 mb-16" />}>
+      <SinglePost slug={slug} />
     </Suspense>
   );
 }
