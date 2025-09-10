@@ -6,6 +6,8 @@ import {
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 
+export const dynamic = 'force-static';
+
 type PostSlugPageProps = {
   params: Promise<{ slug: string }>;
 };
