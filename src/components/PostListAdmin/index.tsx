@@ -1,12 +1,16 @@
-import { deletePostAction } from "@/actions/post/delete-post-actions";
 import { findAllPostsAdmin } from "@/utils/queries/admin";
-import { Trash2Icon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import DeletePostButton from "../admin/DeletePost";
+import ErrorMessage from "../ErrorMessage";
 
 export default async function PostListAdmin() {
   const posts = await findAllPostsAdmin();
+
+  if (posts.length <= 0)
+    return (
+      <ErrorMessage contentTitle="Hey 😅" content="Let's create some post?" />
+    );
 
   return (
     <div className="mb-16">

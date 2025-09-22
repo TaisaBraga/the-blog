@@ -1,5 +1,5 @@
 import { formatDateTime } from "@/utils/format-datetime";
-import { findPostsBySlugCached } from "@/utils/queries/posts";
+import { findPublicPostBySlugCached } from "@/utils/queries/posts";
 import Image from "next/image";
 import React from "react";
 import PostHeading from "../PostHeading";
@@ -9,7 +9,7 @@ type SinglePostProps = {
   slug: string;
 };
 export default async function SinglePost({ slug }: SinglePostProps) {
-  const post = await findPostsBySlugCached(slug);
+  const post = await findPublicPostBySlugCached(slug);
 
   return (
     <article className="mb-16">
