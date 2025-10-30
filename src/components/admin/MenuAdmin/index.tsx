@@ -18,7 +18,7 @@ export default function MenuAdmin() {
         !isOpen && "h-10"
       } ${!isOpen && "overflow-hidden"} sm:overflow-visible sm:h-auto`}
     >
-      <button onClick={() => setIsOpen(s => !s)} className="[&>svg]:w-[16px] [&>svg]:h-[16px] px-4 rounded-lg flex items-center justify-start gap-3 h-10 shrink-0 transition hover:bg-slate-800 text-blue-200 italic cursor-pointer sm:hidden">
+      <button onClick={() => setIsOpen(prev => !prev)} className="[&>svg]:w-[16px] [&>svg]:h-[16px] px-4 rounded-lg flex items-center justify-start gap-3 h-10 shrink-0 transition hover:bg-slate-800 text-blue-200 italic cursor-pointer sm:hidden">
         {isOpen ? (
           <>
             <CircleXIcon />

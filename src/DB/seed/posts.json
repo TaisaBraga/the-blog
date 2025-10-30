@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "id": "afa086e4-53e4-492d-acf2-7c2966d83fcd",
-      "title": "Dicas para manter a saúde mental em dia",
-      "slug": "dicas-para-manter-a-saude-mental-em-dia",
-      "excerpt": "Em vez de configurar tudo manualmente, basta criar um arquivo com o nome certo e o Next.js entende que aquilo representa uma página.",
-      "content": "Em vez de configurar tudo manualmente, basta criar um arquivo com o nome certo e o Next.js entende que aquilo representa uma página.",
-      "coverImageUrl": "/images/bryen_6.png",
-      "published": true,
-      "createdAt": "2025-04-07T00:24:38.616Z",
-      "updatedAt": "2025-04-07T00:33:56.907Z",
-      "author": "Marina Duarte"
-    },
-    {
       "id": "1b6a5f57-8a19-4933-91f4-1af678464ded",
       "title": "Como a escrita pode mudar sua carreira",
       "slug": "como-a-escrita-pode-mudar-sua-carreira",
