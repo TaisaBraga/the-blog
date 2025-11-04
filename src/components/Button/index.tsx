@@ -6,11 +6,13 @@ type ButtonSizes = "sm" | "md" | "lg";
 type ButtonComponentProps = {
   variant?: ButtonVariants;
   size?: ButtonSizes;
+  className?: string;
 } & React.ComponentProps<"button">;
 
 export default function ButtonComponent({
   variant = "default",
   size = "md",
+  className,
   ...props
 }: ButtonComponentProps) {
   const buttonVariants: Record<ButtonVariants, string> = {
@@ -24,6 +26,6 @@ export default function ButtonComponent({
     lg: "text-lg/tight py-4 px-6 rounded-lg [&_svg]:w-5 [&_svg]:h-5 gap-3",
   };
 
-  const buttonClasses = `${buttonVariants[variant]} ${buttonSizes[size]} flex items-center justify-center cursor-pointer transition disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed`;
+  const buttonClasses = `${className} ${buttonVariants[variant]} ${buttonSizes[size]} flex items-center justify-center cursor-pointer transition disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed`;
   return <button className={buttonClasses} {...props} />;
 }
